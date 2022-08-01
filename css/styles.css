@@ -1,13 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap");
+
+:root {
+  /*Primary Colors*/
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsla(178, 100%, 50%);
+  --Cyan_hover: hsla(178, 100%, 50%, 0.5);
+
+  /*Secundary Colors*/
+  --Very_dark_blue_main_BG: hsl(217, 54%, 11%);
+  --Very_dark_blue_card_BG: hsl(216, 50%, 16%);
+  --Very_dark_blue_line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.attribution {
+/* .attribution {
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+} */
+
+body {
+  background-color: var(--Very_dark_blue_main_BG);
+  min-width: 375px;
+  font-family: "Outfit", sans-serif;
+}
+
+.mainContainer {
+  background-color: var(--Very_dark_blue_card_BG);
+  box-sizing: border-box;
+  width: 330px;
+  height: 545px;
+  margin: 63px auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.imageContainer {
+  background-image: url(../images/image-equilibrium.jpg);
+  background-size: cover; /*new property used*/
+  width: 280px;
+  height: 280px;
+  margin-bottom: 28px;
+  border-radius: 8px;
+}
+
+.colorContainer {
+  background-color: var(--Cyan_hover);
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.eyeContainer {
+  background-image: url(../images/icon-view.svg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center; /*NEW CODE USE*/
+}
+
+.colorContainer:hover {
+  opacity: 1;
+  cursor: pointer;
+  /*Now i know how to produce this kind of hover*/
+}
+
+.textContainer {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+.textHeader h1 {
+  margin-bottom: 15px;
+  color: var(--White);
+  font-weight: 400;
+}
+
+.textHeader h1:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+.paragraphContainer {
+  font-size: 16px;
+
+  margin-bottom: 20px;
+  line-height: 1.5em;
+  color: var(--Soft_blue);
+}
+
+.statsContainer {
+  display: flex;
+  margin-bottom: 10px;
+  /* border: 1px solid black; */
+}
+
+.priceContainer {
+  color: var(--Cyan);
+  font-weight: 400;
+  margin-left: 5px;
+  margin-right: 90px;
+}
+
+.timeContainer {
+  margin-left: 5px;
+  color: var(--Soft_blue);
+}
+
+.imgTime {
+  position: relative;
+  top: 2.5px;
+}
+
+.line {
+  /* border: 1px solid black; */
+  border-bottom: 1px solid var(--Very_dark_blue_line);
+  margin-bottom: 14px;
+}
+
+.creatorContainer {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+
+.imageFooter {
+  border: 1px solid var(--White);
+
+  border-radius: 50%;
+  background-image: url(../images/image-avatar.png);
+  width: 27px;
+  height: 27px;
+  background-size: cover;
+}
+
+.creator {
+  margin-left: 16px;
+  color: var(--Soft_blue);
+  font-size: 15px;
+}
+
+.text {
+  color: var(--White);
+}
+
+.text:hover {
+  cursor: pointer;
+  color: var(--Cyan);
 }
